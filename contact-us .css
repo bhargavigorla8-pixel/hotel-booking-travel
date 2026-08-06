@@ -1,0 +1,415 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.header-container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
+.image{
+    display: flex;
+    width: 50px;
+    height: 40px;
+}
+
+.nav-links{
+    display: flex;
+    gap:30px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    color: red;
+    border-bottom: 1px solid;
+}
+
+.header-button button{
+    background-color: blueviolet;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+}
+.hero-banner{
+    text-align: center;
+    width: 100%;
+    gap:20px;
+    padding: 30px;
+    background-image: url("image/1-1-2.png.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.hero-banner h2{
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+.hero-banner p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-us{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px;
+    
+}
+
+
+form{
+    width: 50%;
+    
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.right-container{
+    
+    width: 50%;
+    padding: 20px 150px;
+     border-radius: 10px;
+}
+.map{
+    
+    font-size: 50px;
+}
+.map p{
+    font-size: 40;
+}
+.phone{
+    
+    font-size: 50px;
+}
+.phone p{
+    font-size: 40;
+}
+.gmail{
+    
+    font-size: 50px;
+}
+.gmal p{
+    font-size: 40;
+}
+
+.g-map{
+    width: 100%;
+    margin-top: 20px;
+}
+.g-map iframe{
+   width: 100%;
+    height: 450px;
+    border: none;
+}
+.footer-column{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:50px.20px;
+    background-color: black;
+    color: white;    
+}
+
+.footer-container li{
+    list-style: none;
+}
+.footer-container a{
+    text-decoration: none;
+    color: white;
+}
+.footer-container h2{
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#222;
+    transition:.4s;
+}
+
+/* Dark Mode */
+
+body.dark{
+    background:#111827;
+    color:white;
+}
+
+/* Header */
+
+header{
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+body.dark header{
+    background:#1f2937;
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.logo img{
+    width:80px;
+    height: 80px;
+}
+
+.logo h2{
+    font-size:30px;
+}
+
+.logo span{
+    color:#0d6efd;
+}
+
+/* Navigation */
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 18px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:inherit;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#0d6efd;
+}
+
+/* Right Side */
+
+.right-menu{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+button{
+    cursor:pointer;
+}
+
+/* Toggle Buttons */
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#f2f2f2;
+    font-size:18px;
+}
+
+body.dark .icon-btn{
+    background:#374151;
+    color:white;
+}
+
+/* Book Button */
+
+.book-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:30px;
+    background:#0d6efd;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.book-btn:hover{
+    background:orange;
+}
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#0F4C81;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/*==================== DESTINATIONS ====================*/
+
+.destinations{
+    padding:100px 8%;
+    background:#fff;
+}
+
+.destination-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.destination-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.destination-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.destination-card:hover img{
+    transform:scale(1.1);
+}
+
+.destination-info{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+.destination-info h3{
+    font-size:28px;
+}
+
+.destination-info p{
+    margin-top:5px;
+}
+
+/*==================== HOTELS ====================*/
+
+.featured-hotels{
+    padding:100px 8%;
+    background:#F8FAFC;
+}
+
+.hotel-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:35px;
+}
+
+.hotel-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.hotel-card:hover{
+    transform:translateY(-10px);
+}
+
+.hotel-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.hotel-content{
+    padding:25px;
+}
+
+.hotel-content h3{
+    color:#0F4C81;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:#ffb400;
+    margin-bottom:10px;
+}
+
+.hotel-content p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.price{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price h4{
+    color:#FF8C42;
+    font-size:24px;
+}
+
+.price span{
+    color:#777;
+    font-size:15px;
+}
+
+.price a{
+    text-decoration:none;
+    background:#0F4C81;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.price a:hover{
+    background:#FF8C42;
+}

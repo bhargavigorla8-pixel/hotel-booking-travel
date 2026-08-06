@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <input type="text" placeholder="enter your name" id="username">
+ 
+    <button id="savebtn">save</button>
+ 
+    <button id="showbtn">show</button>
+    <button id="removebtn">remove</button>
+ 
+   <p id="result"></p>
+ 
+ 
+   <script>
+           
+ 
+           let savebutton= document.getElementById("savebtn");
+ 
+           let showbutton =document.getElementById("showbtn");
+ 
+           let result=document.getElementById("result");
+ 
+           let remove=document.getElementById("removebtn");
+ 
+ 
+           savebutton.addEventListener("click",function(){
+ 
+                 let input=document.getElementById("username").value;
+ 
+                 localStorage.setItem("employeename",input);
+ 
+                 alert("data saved successfully");
+ 
+           });
+
+
+           showbutton.addEventListener("click",function(){
+ 
+                let storedata=localStorage.getItem("order");
+ 
+ 
+                result.innerHTML= "storagename :" + storedata;
+ 
+           });
+ 
+           remove.addEventListener("click",function(){
+ 
+                    localStorage.removeItem("order");
+ 
+ 
+           })
+ 
+ 
+ 
+ 
+           
+ 
+ 
+   </script>
+ 
+ 
+ 
+ 
+</body>
+</html>
+
