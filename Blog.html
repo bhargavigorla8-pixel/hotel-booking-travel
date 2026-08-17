@@ -69,106 +69,73 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
  
     </div>
     </header>
-   
-<script>
+
+    <script>
+
 const themeBtn = document.getElementById("themeBtn");
-const rtlBtn = document.getElementById("rtlBtn");
- 
-// ===============================
-// Restore Saved Theme
-// ===============================
- 
+
+/* ===============================
+   RESTORE SAVED THEME
+================================ */
+
 const savedTheme = localStorage.getItem("theme");
- 
-if (savedTheme === "dark") {
+
+if (savedTheme === "light") {
+
     document.body.classList.add("dark");
-    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-} else {
-    document.body.classList.remove("dark");
+
     themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-}
- 
-// ===============================
-// Restore Saved Direction
-// ===============================
- 
-const savedDirection = localStorage.getItem("direction");
- 
-if (savedDirection === "rtl") {
- 
-    document.documentElement.setAttribute("dir", "rtl");
- 
-    rtlBtn.innerHTML = `
-        <i class="fa-solid fa-language"></i>
-        <span>LTR</span>
-    `;
- 
+    themeBtn.title = "Light Mode";
+
 } else {
- 
-    document.documentElement.setAttribute("dir", "ltr");
- 
-    rtlBtn.innerHTML = `
-        <i class="fa-solid fa-language"></i>
-        <span>RTL</span>
-    `;
+
+    document.body.classList.remove("dark");
+
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    themeBtn.title = "Dark Mode";
+
 }
- 
-// ===============================
-// Dark / Light Mode
-// ===============================
- 
-themeBtn.addEventListener("click", () => {
- 
-    document.body.classList.toggle("dark");
- 
+
+
+/* ===============================
+   DARK / LIGHT MODE
+================================ */
+
+themeBtn.addEventListener("click", function () {
+
     if (document.body.classList.contains("dark")) {
- 
-        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
- 
+
+        /* DARK → LIGHT */
+
+        document.body.classList.remove("dark");
+
+        themeBtn.innerHTML =
+            '<i class="fa-solid fa-sun"></i>';
+
+        themeBtn.title = "Dark Mode";
+
         localStorage.setItem("theme", "dark");
- 
+
     } else {
- 
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
- 
+
+        /* LIGHT → DARK */
+
+        document.body.classList.add("dark");
+
+        themeBtn.innerHTML =
+            '<i class="fa-solid fa-moon"></i>';
+
+        themeBtn.title = "Light Mode";
+
         localStorage.setItem("theme", "light");
+
     }
- 
+
 });
- 
-// ===============================
-// RTL / LTR
-// ===============================
- 
-rtlBtn.addEventListener("click", () => {
- 
-    if (document.documentElement.getAttribute("dir") === "ltr") {
- 
-        document.documentElement.setAttribute("dir", "rtl");
- 
-        rtlBtn.innerHTML = `
-            <i class="fa-solid fa-language"></i>
-            <span>LTR</span>
-        `;
- 
-        localStorage.setItem("direction", "rtl");
- 
-    } else {
- 
-        document.documentElement.setAttribute("dir", "ltr");
- 
-        rtlBtn.innerHTML = `
-            <i class="fa-solid fa-language"></i>
-            <span>RTL</span>
-        `;
- 
-        localStorage.setItem("direction", "ltr");
-    }
- 
-});
- 
- 
+
 </script>
+   
+
 <section class="blog-hero">
     <div class="blog-hero-content">
         <h5>Explore & Discover</h5>

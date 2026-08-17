@@ -1094,3 +1094,377 @@ html[dir="rtl"] .header-right{
     text-align:center;
     padding:20px;
 }
+
+
+
+/* =========================================================
+   COMPLETE DARK MODE - ABOUT PAGE
+   Header and Hero already have their own styling
+========================================================= */
+
+
+/* ================= ABOUT SECTION ================= */
+
+body.dark .about-section {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .about-content h4 {
+    color: #ff9800;
+}
+
+body.dark .about-content h2 {
+    color: #ffffff;
+}
+
+body.dark .about-content p {
+    color: #ffffff;
+}
+
+body.dark .about-boxes .box {
+    background: #000000;
+    border: 2px solid #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .about-boxes .box h3 {
+    color: #ff9800;
+}
+
+body.dark .about-boxes .box span {
+    color: #ffffff;
+}
+
+body.dark .about-boxes .box:hover {
+    background: #0d6efd;
+}
+
+body.dark .about-boxes .box:hover span {
+    color: #ffffff;
+}
+
+body.dark .about-btn {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+body.dark .about-btn:hover {
+    background: #0d6efd;
+    border-color: #0d6efd;
+}
+
+
+/* ================= WHY CHOOSE US ================= */
+
+body.dark .why-choose {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .heading h4 {
+    color: #ff9800;
+}
+
+body.dark .heading h2 {
+    color: #ffffff;
+}
+
+body.dark .heading p {
+    color: #ffffff;
+}
+
+body.dark .choose-card {
+    background: #000000;
+    border: 2px solid #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .choose-card i {
+    color: #ff9800;
+}
+
+body.dark .choose-card h3 {
+    color: #ffffff;
+}
+
+body.dark .choose-card p {
+    color: #ffffff;
+}
+
+body.dark .choose-card:hover {
+    background: #0d6efd;
+}
+
+body.dark .choose-card:hover h3,
+body.dark .choose-card:hover p,
+body.dark .choose-card:hover i {
+    color: #ffffff;
+}
+
+
+/* ================= MISSION & VISION ================= */
+
+body.dark .mission-vision {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .section-title h4 {
+    color: #ff9800;
+}
+
+body.dark .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .section-title p {
+    color: #ffffff;
+}
+
+body.dark .mission-card {
+    background: #000000;
+    border-top: 6px solid #ff9800;
+    color: #ffffff;
+}
+
+body.dark .mission-card h3 {
+    color: #ffffff;
+}
+
+body.dark .mission-card p {
+    color: #ffffff;
+}
+
+body.dark .mission-card .icon {
+    background: #0d6efd;
+}
+
+body.dark .mission-card .icon i {
+    color: #ffffff;
+}
+
+body.dark .mission-card:hover {
+    background: #0d6efd;
+}
+
+body.dark .mission-card:hover h3,
+body.dark .mission-card:hover p {
+    color: #ffffff;
+}
+
+body.dark .mission-card:hover .icon {
+    background: #ff9800;
+}
+
+
+/* ================= HOTEL COUNTER ================= */
+
+body.dark .hotel-counter {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .counter-heading h4 {
+    color: #ff9800;
+}
+
+body.dark .counter-heading h2 {
+    color: #ffffff;
+}
+
+body.dark .counter-heading p {
+    color: #ffffff;
+}
+
+body.dark .counter-box {
+    background: #0d6efd;
+    color: #ffffff;
+    border: 3px solid #0d6efd;
+}
+
+body.dark .counter-box:hover {
+    background: #ff9800;
+    border-color: #ff9800;
+}
+
+
+/* ================= OUR TEAM ================= */
+
+body.dark .our-team {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .team-heading h4 {
+    color: #ff9800;
+}
+
+body.dark .team-heading h2 {
+    color: #ffffff;
+}
+
+body.dark .team-heading p {
+    color: #ffffff;
+}
+
+body.dark .team-card {
+    background: #000000;
+    border: 3px solid #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .team-content {
+    background: #000000;
+}
+
+body.dark .team-content h3 {
+    color: #ffffff;
+}
+
+body.dark .team-content h5 {
+    color: #0d6efd;
+}
+
+body.dark .team-social a {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .team-social a:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+body.dark .team-card:hover {
+    border-color: #ff9800;
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+body.dark .testimonials {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .testimonials .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .testimonials .section-title p {
+    color: #ffffff;
+}
+
+body.dark .testimonial-card {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+body.dark .testimonial-card h3 {
+    color: #0d6efd;
+}
+
+body.dark .testimonial-card span {
+    color: #ffffff;
+}
+
+body.dark .testimonial-card p {
+    color: #ffffff;
+}
+
+body.dark .stars {
+    color: #ff9800;
+}
+
+
+/* ================= FOOTER ================= */
+
+body.dark .footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .footer-logo {
+    color: #ffffff;
+}
+
+body.dark .footer-logo span {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p {
+    color: #ffffff;
+}
+
+body.dark .footer-box h3 {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a {
+    color: #ffffff;
+}
+
+body.dark .footer-box > a:hover {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a i {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p i {
+    color: #ff9800;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+body.dark .social-icons a {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.dark .social-icons a:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+body.dark .copyright {
+    background: #000000;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+body.dark .copyright p {
+    color: #ffffff;
+}
+
+
+/* ================= SMOOTH TRANSITION ================= */
+
+body,
+.about-section,
+.why-choose,
+.choose-card,
+.mission-vision,
+.mission-card,
+.hotel-counter,
+.counter-box,
+.our-team,
+.team-card,
+.team-content,
+.testimonials,
+.testimonial-card,
+.footer,
+.copyright {
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}

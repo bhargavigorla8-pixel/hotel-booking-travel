@@ -1007,3 +1007,284 @@ grid-template-columns:1fr;
     text-align:center;
     padding:20px;
 }
+
+
+
+/* =========================================================
+   COMPLETE DARK MODE - SERVICES PAGE
+   Header + Hero are already handled
+========================================================= */
+
+
+/* ================= HOTEL SERVICES ================= */
+
+body.dark .hotel-services {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .hotel-services .section-title h2 {
+    color: #fff;
+}
+
+body.dark .hotel-services .section-title p {
+    color: #fff;
+}
+
+body.dark .service-card {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: none;
+}
+
+body.dark .service-card i {
+    color: #ff9800;
+}
+
+body.dark .service-card h3 {
+    color: #0d6efd;
+}
+
+body.dark .service-card p {
+    color: #fff;
+}
+
+body.dark .service-card:hover {
+    background: #0d6efd;
+}
+
+body.dark .service-card:hover i,
+body.dark .service-card:hover h3,
+body.dark .service-card:hover p {
+    color: #fff;
+}
+
+
+/* ================= DESTINATIONS ================= */
+
+body.dark .destination {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .destination-title h2 {
+    color: #fff;
+}
+
+body.dark .destination-title h2 span {
+    color: #0d6efd;
+}
+
+body.dark .destination-title p {
+    color: #fff;
+}
+
+body.dark .destination-card {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: none;
+}
+
+body.dark .destination-content {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .destination-content h3 {
+    color: #fff;
+}
+
+body.dark .destination-content p {
+    color: #fff;
+}
+
+body.dark .destination-content button {
+    background: #ff9800;
+    color: #fff;
+}
+
+body.dark .destination-content button:hover {
+    background: #0d6efd;
+}
+
+
+/* ================= HOTEL ROOMS ================= */
+
+body.dark .rooms {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .rooms-title h2 {
+    color: #fff;
+}
+
+body.dark .rooms-title h2 span {
+    color: #0d6efd;
+}
+
+body.dark .rooms-title p {
+    color: #fff;
+}
+
+body.dark .room-card {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: none;
+}
+
+body.dark .room-content {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .room-content h3 {
+    color: #fff;
+}
+
+body.dark .room-content p {
+    color: #fff;
+}
+
+body.dark .room-price {
+    color: #0d6efd;
+}
+
+body.dark .room-content button {
+    background: #ff9800;
+    color: #fff;
+}
+
+body.dark .room-content button:hover {
+    background: #0d6efd;
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+body.dark .testimonials {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .testimonial-heading h2 {
+    color: #fff;
+}
+
+body.dark .testimonial-heading span {
+    color: #0d6efd;
+}
+
+body.dark .testimonial-heading p {
+    color: #fff;
+}
+
+body.dark .testimonial-card {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: none;
+}
+
+body.dark .testimonial-card h3 {
+    color: #fff;
+}
+
+body.dark .testimonial-card p {
+    color: #fff;
+}
+
+body.dark .stars {
+    color: #ff9800;
+}
+
+
+/* ================= FOOTER ================= */
+
+body.dark .footer {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .footer-logo {
+    color: #fff;
+}
+
+body.dark .footer-logo span {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p {
+    color: #fff;
+}
+
+body.dark .footer-box h3 {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a {
+    color: #fff;
+}
+
+body.dark .footer-box > a:hover {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a i {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p i {
+    color: #ff9800;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+body.dark .social-icons a {
+    background: #fff;
+    color: #000;
+}
+
+body.dark .social-icons a:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+body.dark .copyright {
+    background: #000;
+    color: #fff;
+    border-top: 1px solid #fff;
+}
+
+body.dark .copyright p {
+    color: #fff;
+}
+
+
+/* ================= SMOOTH TRANSITION ================= */
+
+body,
+.hotel-services,
+.service-card,
+.destination,
+.destination-card,
+.destination-content,
+.rooms,
+.room-card,
+.room-content,
+.testimonials,
+.testimonial-card,
+.footer,
+.copyright {
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}

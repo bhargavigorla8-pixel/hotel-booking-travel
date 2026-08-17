@@ -287,6 +287,102 @@ body.dark #themeBtn{
     background:black;
     color:#fff;
 }
+
+/* ===============================
+   NORMAL / LIGHT
+================================ */
+
+body{
+    background:#fff;
+    color:#000;
+    transition:0.4s ease;
+}
+
+
+/* ===============================
+   DARK
+================================ */
+
+body.dark{
+    background:#000;
+    color:#fff;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.header{
+    background:#000;
+}
+
+body.dark .header{
+    background:#fff;
+}
+
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+.nav-links a{
+    color:#fff;
+}
+
+body.dark .nav-links a{
+    color:#000;
+}
+
+body.dark .nav-links a:hover{
+    color:#ff9800;
+}
+
+
+/* ===============================
+   RTL BUTTON
+================================ */
+
+#rtlBtn{
+    background:#fff;
+    color:#0d6efd;
+}
+
+
+/* ===============================
+   THEME BUTTON
+================================ */
+
+#themeBtn{
+    background:#fff;
+    color:#0d6efd;
+}
+
+body.dark #themeBtn{
+    background:#000;
+    color:#fff;
+}
+
+
+/* ===============================
+   HOVER
+================================ */
+
+#rtlBtn:hover,
+#themeBtn:hover{
+    background:#ff9800;
+    color:#fff;
+}
+
+
+/* ===============================
+   BOOK BUTTON
+================================ */
+
+.book-btn{
+    background:#ff9800;
+    color:#fff;
+}
  
 /* ==========================
         RTL SUPPORT
@@ -367,6 +463,8 @@ html[dir="rtl"] .header-right{
 }
  
 }
+
+
 .footer{
     background:#000;
     color:#fff;
@@ -950,4 +1048,202 @@ html[dir="rtl"] .header-right{
     .blog-hero-content p{
         font-size:15px;
     }
+}
+
+
+/* =====================================================
+   DARK MODE - BLOG + FAQ SECTIONS
+   ===================================================== */
+
+/* ================= BLOG SECTION ================= */
+
+body.dark .blog-section {
+    background: #000;
+}
+
+body.dark .blog-heading h2 {
+    color: #fff;
+}
+
+body.dark .blog-heading p {
+    color: #fff;
+}
+
+body.dark .blog-card {
+    background: #000;
+    border-color: #0d6efd;
+}
+
+body.dark .blog-content h3 {
+    color: #fff;
+}
+
+body.dark .blog-content p {
+    color: #fff;
+}
+
+body.dark .blog-date {
+    color: #ff9800;
+}
+
+body.dark .read-more {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .read-more:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* ================= FAQ SECTION ================= */
+
+body.dark .faq-section {
+    background: #000;
+}
+
+body.dark .faq-heading h2 {
+    color: #fff;
+}
+
+body.dark .faq-heading p {
+    color: #fff;
+}
+
+body.dark .faq-item {
+    background: #000;
+    border-color: #0d6efd;
+}
+
+body.dark .faq-question {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .faq-question:hover {
+    color: #0d6efd;
+}
+
+body.dark .faq-question span {
+    color: #ff9800;
+}
+
+body.dark .faq-answer {
+    background: #000;
+}
+
+body.dark .faq-answer p {
+    color: #fff;
+}
+
+body.dark .faq-item:hover {
+    border-color: #ff9800;
+}
+
+
+/* ================= BLOG CARD HOVER ================= */
+
+body.dark .blog-card:hover {
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+
+/* ================= FAQ ACTIVE ANSWER ================= */
+
+body.dark .faq-answer p {
+    color: #fff;
+}
+
+
+/* ================= FOOTER ================= */
+/* Footer is already black, so only make sure
+   its text remains visible in dark mode */
+
+body.dark .footer {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .footer-box h3 {
+    color: #ff9800;
+}
+
+body.dark .footer-box p {
+    color: #fff;
+}
+
+body.dark .footer-box a {
+    color: #fff;
+}
+
+body.dark .footer-box a:hover {
+    color: #ff9800;
+}
+
+body.dark .copyright {
+    color: #fff;
+}
+
+
+/* ================= BLOG HERO ================= */
+/* Hero already has its own dark overlay.
+   Keep it unchanged. */
+
+
+/* =====================================================
+   LIGHT MODE
+   ===================================================== */
+
+body:not(.dark) .blog-section {
+    background: #fff;
+}
+
+body:not(.dark) .blog-heading h2 {
+    color: #000;
+}
+
+body:not(.dark) .blog-heading p {
+    color: #000;
+}
+
+body:not(.dark) .blog-card {
+    background: #fff;
+}
+
+body:not(.dark) .blog-content h3 {
+    color: #000;
+}
+
+body:not(.dark) .blog-content p {
+    color: #000;
+}
+
+body:not(.dark) .faq-section {
+    background: #fff;
+}
+
+body:not(.dark) .faq-heading h2 {
+    color: #000;
+}
+
+body:not(.dark) .faq-heading p {
+    color: #000;
+}
+
+body:not(.dark) .faq-item {
+    background: #fff;
+}
+
+body:not(.dark) .faq-question {
+    background: #fff;
+    color: #000;
+}
+
+body:not(.dark) .faq-answer {
+    background: #fff;
+}
+
+body:not(.dark) .faq-answer p {
+    color: #000;
 }

@@ -144,6 +144,8 @@ display: block;
 ========================== */
  
 .header-right{
+
+
  
     display:flex;
     align-items:center;
@@ -940,4 +942,370 @@ html[dir="rtl"] .header-right{
     .hero-banner h5{
         font-size:16px;
     }
+}
+
+
+
+
+/* =========================================================
+   COMPLETE DARK MODE FOR OTHER SECTIONS
+   Header + Hero are already handled
+========================================================= */
+
+
+/* ================= SECTION TITLE ================= */
+
+body.dark .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .section-title p {
+    color: #ffffff;
+}
+
+
+/* ================= DESTINATIONS ================= */
+
+body.dark .destinations {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .destinations .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .destinations .section-title p {
+    color: #ffffff;
+}
+
+body.dark .destination-card {
+    background: #000000;
+}
+
+body.dark .destination-info {
+    color: #ffffff;
+}
+
+
+/* ================= FEATURED HOTELS ================= */
+
+body.dark .featured-hotels {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .featured-hotels .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .featured-hotels .section-title p {
+    color: #ffffff;
+}
+
+body.dark .hotel-card {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+body.dark .hotel-content {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .hotel-content h3 {
+    color: #0d6efd;
+}
+
+body.dark .hotel-content p {
+    color: #ffffff;
+}
+
+body.dark .rating {
+    color: #ff9800;
+}
+
+body.dark .price h4 {
+    color: #ff9800;
+}
+
+body.dark .price span {
+    color: #ffffff;
+}
+
+body.dark .price a {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .price a:hover {
+    background: #ff9800;
+}
+
+
+/* ================= WHY CHOOSE US ================= */
+
+body.dark .why-choose {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .why-choose .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .why-choose .section-title p {
+    color: #ffffff;
+}
+
+body.dark .choose-card {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+body.dark .choose-card i {
+    color: #ff9800;
+}
+
+body.dark .choose-card h3 {
+    color: #0d6efd;
+}
+
+body.dark .choose-card p {
+    color: #ffffff;
+}
+
+body.dark .choose-card:hover {
+    background: #0d6efd;
+}
+
+body.dark .choose-card:hover h3,
+body.dark .choose-card:hover p,
+body.dark .choose-card:hover i {
+    color: #ffffff;
+}
+
+
+/* ================= HOTEL FACILITIES ================= */
+
+body.dark .facilities {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .facilities .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .facilities .section-title p {
+    color: #ffffff;
+}
+
+body.dark .facility-card {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+body.dark .facility-card i {
+    color: #0d6efd;
+}
+
+body.dark .facility-card h3 {
+    color: #ffffff;
+}
+
+body.dark .facility-card:hover {
+    background: #ff9800;
+}
+
+body.dark .facility-card:hover i,
+body.dark .facility-card:hover h3 {
+    color: #ffffff;
+}
+
+
+/* ================= SPECIAL OFFERS ================= */
+
+body.dark .offers {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .offers .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .offers .section-title p {
+    color: #ffffff;
+}
+
+body.dark .offer-card {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+body.dark .offer-content {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .offer-tag {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+body.dark .offer-content h3 {
+    color: #0d6efd;
+}
+
+body.dark .offer-content p {
+    color: #ffffff;
+}
+
+body.dark .offer-btn {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .offer-btn:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+body.dark .testimonials {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .testimonials .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .testimonials .section-title p {
+    color: #ffffff;
+}
+
+body.dark .testimonial-card {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+body.dark .testimonial-card h3 {
+    color: #0d6efd;
+}
+
+body.dark .testimonial-card span {
+    color: #ffffff;
+}
+
+body.dark .stars {
+    color: #ff9800;
+}
+
+body.dark .testimonial-card p {
+    color: #ffffff;
+}
+
+
+/* ================= FOOTER ================= */
+
+body.dark .footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .footer-logo {
+    color: #ffffff;
+}
+
+body.dark .footer-logo span {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p {
+    color: #ffffff;
+}
+
+body.dark .footer-box h3 {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a {
+    color: #ffffff;
+}
+
+body.dark .footer-box > a:hover {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a i {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p i {
+    color: #ff9800;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+body.dark .social-icons a {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.dark .social-icons a:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+body.dark .copyright {
+    background: #000000;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+body.dark .copyright p {
+    color: #ffffff;
+}
+
+
+/* ================= SMOOTH TRANSITION ================= */
+
+body,
+.destinations,
+.featured-hotels,
+.hotel-card,
+.hotel-content,
+.why-choose,
+.choose-card,
+.facilities,
+.facility-card,
+.offers,
+.offer-card,
+.offer-content,
+.testimonials,
+.testimonial-card,
+.footer,
+.copyright {
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
 }

@@ -874,3 +874,238 @@ body {
     }
 
 }
+
+
+
+
+
+/* =========================================
+   DARK MODE - COMPLETE CONTACT PAGE
+========================================= */
+
+/* Main body */
+body.dark {
+    background: #000;
+    color: #fff;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+body.dark .contact-section {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .contact-info h2,
+body.dark .contact-form h2 {
+    color: #fff;
+}
+
+body.dark .contact-description {
+    color: #fff;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION BOXES
+========================================= */
+
+body.dark .contact-box {
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+body.dark .contact-box h3 {
+    color: #fff;
+}
+
+body.dark .contact-box p {
+    color: #fff;
+}
+
+body.dark .contact-icon {
+    background: #0d6efd;
+    color: #fff;
+}
+
+
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
+
+body.dark .contact-social h3 {
+    color: #fff;
+}
+
+body.dark .contact-social a {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .contact-social a:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+body.dark .contact-form {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+body.dark .input-box label {
+    color: #fff;
+}
+
+body.dark .input-box input,
+body.dark .input-box textarea {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+body.dark .input-box input::placeholder,
+body.dark .input-box textarea::placeholder {
+    color: #fff;
+}
+
+body.dark .input-box input:focus,
+body.dark .input-box textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+
+/* Send button */
+
+body.dark .send-btn {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .send-btn:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* =========================================
+   MAP SECTION
+========================================= */
+
+body.dark .map-section {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .map-heading h2 {
+    color: #fff;
+}
+
+body.dark .map-heading p {
+    color: #fff;
+}
+
+body.dark .map-container {
+    border: 1px solid #fff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+body.dark .footer {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .footer-box h3 {
+    color: #fff;
+}
+
+body.dark .footer-box p {
+    color: #fff;
+}
+
+body.dark .footer-box a {
+    color: #fff;
+}
+
+body.dark .footer-box a:hover {
+    color: #ff9800;
+}
+
+
+/* Footer logo */
+
+body.dark .footer-logo {
+    color: #fff;
+}
+
+body.dark .footer-logo span {
+    color: #ff9800;
+}
+
+
+/* Footer social icons */
+
+body.dark .social-icons a {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .social-icons a:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* Footer icons */
+
+body.dark .footer-box i {
+    color: #0d6efd;
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+body.dark .copyright {
+    background: #000;
+    color: #fff;
+    border-top: 1px solid #fff;
+}
+
+body.dark .copyright p {
+    color: #fff;
+}
+
+
+/* =========================================
+   SMOOTH TRANSITION
+========================================= */
+
+body,
+.contact-section,
+.contact-box,
+.contact-form,
+.map-section,
+.footer,
+.copyright,
+.input-box input,
+.input-box textarea {
+    transition: background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}

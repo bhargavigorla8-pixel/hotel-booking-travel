@@ -1155,3 +1155,389 @@ html[dir="rtl"] .header-right{
     }
 }
 
+
+
+
+
+
+/* =========================================================
+   COMPLETE DARK MODE
+   Applies to all sections except the hero design
+========================================================= */
+
+
+/* ================= SEARCH SECTION ================= */
+
+body.dark .search-section {
+    background: #000;
+}
+
+body.dark .search-box {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+body.dark .search-item label {
+    color: #fff;
+}
+
+body.dark .search-item input,
+body.dark .search-item select {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .search-item input::placeholder {
+    color: #fff;
+}
+
+body.dark .search-item input[type="date"] {
+    color-scheme: dark;
+}
+
+body.dark .search-item select {
+    color-scheme: dark;
+}
+
+body.dark .search-btn {
+    background: #ff9800;
+    color: #fff;
+}
+
+body.dark .search-btn:hover {
+    background: #0d6efd;
+}
+
+
+/* ================= SECTION TITLES ================= */
+
+body.dark .section-title h2 {
+    color: #fff;
+}
+
+body.dark .section-title h2 span {
+    color: #0d6efd;
+}
+
+body.dark .section-title p,
+body.dark .small-title {
+    color: #ff9800;
+}
+
+
+/* ================= FACILITIES ================= */
+
+body.dark .facilities {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .facility-box {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.dark .facility-box h3 {
+    color: #fff;
+}
+
+body.dark .facility-box p {
+    color: #fff;
+}
+
+body.dark .facility-icon {
+    background: #ff9800;
+    color: #fff;
+}
+
+body.dark .facility-box:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .facility-box:hover h3,
+body.dark .facility-box:hover p {
+    color: #fff;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+/* Your About section is already black,
+   so keep it black in dark mode */
+
+body.dark .about {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .about-content h2 {
+    color: #fff;
+}
+
+body.dark .about-content h2 span {
+    color: #ff9800;
+}
+
+body.dark .about-content > p {
+    color: #fff;
+}
+
+body.dark .about-features {
+    color: #fff;
+}
+
+body.dark .about-features span {
+    color: #fff;
+}
+
+body.dark .about-features i {
+    color: #ff9800;
+}
+
+body.dark .experience {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* ================= DESTINATIONS ================= */
+
+body.dark .destinations {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .destinations .section-title h2 {
+    color: #fff;
+}
+
+body.dark .destination-content {
+    color: #fff;
+}
+
+
+/* ================= ROOMS ================= */
+
+body.dark .rooms {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .rooms .section-title h2 {
+    color: #fff;
+}
+
+body.dark .room-card {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+body.dark .room-content {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .room-content h3 {
+    color: #fff;
+}
+
+body.dark .room-content p {
+    color: #fff;
+}
+
+body.dark .room-info {
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+body.dark .room-info span {
+    color: #fff;
+}
+
+body.dark .room-info i {
+    color: #0d6efd;
+}
+
+body.dark .room-btn {
+    color: #0d6efd;
+}
+
+body.dark .room-btn:hover {
+    color: #ff9800;
+}
+
+body.dark .price {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* ================= TESTIMONIAL ================= */
+
+body.dark .testimonial {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .testimonial .section-title h2 {
+    color: #fff;
+}
+
+body.dark .testimonial-box {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.dark .testimonial-box > p {
+    color: #fff;
+}
+
+body.dark .guest h3 {
+    color: #fff;
+}
+
+body.dark .guest-icon {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .quote {
+    background: #ff9800;
+    color: #fff;
+}
+
+body.dark .rating {
+    color: #ff9800;
+}
+
+
+/* ================= CTA ================= */
+
+/* Keep your blue CTA in dark mode */
+
+body.dark .cta {
+    background: #0d6efd;
+    color: #fff;
+}
+
+body.dark .cta h2 {
+    color: #fff;
+}
+
+body.dark .cta h2 span {
+    color: #ff9800;
+}
+
+body.dark .cta p {
+    color: #fff;
+}
+
+body.dark .cta-content > i {
+    color: #ff9800;
+}
+
+body.dark .cta-btn {
+    background: #ff9800;
+    color: #fff;
+}
+
+body.dark .cta-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+/* ================= FOOTER ================= */
+
+body.dark .footer {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .footer-logo {
+    color: #fff;
+}
+
+body.dark .footer-logo span {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p {
+    color: #fff;
+}
+
+body.dark .footer-box h3 {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a {
+    color: #fff;
+}
+
+body.dark .footer-box > a:hover {
+    color: #ff9800;
+}
+
+body.dark .footer-box > a i {
+    color: #ff9800;
+}
+
+body.dark .footer-box > p i {
+    color: #ff9800;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+body.dark .social-icons a {
+    background: #fff;
+    color: #000;
+}
+
+body.dark .social-icons a:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+body.dark .copyright {
+    background: #000;
+    color: #fff;
+    border-top: 1px solid #fff;
+}
+
+body.dark .copyright p {
+    color: #fff;
+}
+
+
+/* ================= SMOOTH TRANSITION ================= */
+
+body,
+.search-section,
+.search-box,
+.facilities,
+.facility-box,
+.about,
+.destinations,
+.rooms,
+.room-card,
+.room-content,
+.testimonial,
+.testimonial-box,
+.footer,
+.copyright,
+.cta {
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
