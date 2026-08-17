@@ -1,130 +1,376 @@
+
+/* ================= GENERAL ================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#ffffff;
-    color:black;
-    transition:.4s;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#000;
+    background:#fff;
 }
 
-/* Dark Mode */
-
-body.dark{
-    background:black;
-    color:white;
+a{
+    text-decoration:none;
 }
 
-/* Header */
-
-header{
+img{
     width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    position:sticky;
+    display:block;
+}
+
+
+/* ================= HEADER ================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+ 
+html{
+    scroll-behavior:smooth;
+}
+ 
+body{
+    background:#ffffff;
+    color:#222;
+    padding-top:90px;
+    transition:.4s ease;
+}
+ 
+/* ==========================
+      STICKY HEADER
+========================== */
+ 
+.header{
+ 
+    position:fixed;
     top:0;
-    z-index:1000;
-}
-
-body.dark header{
-    background:#1f2937;
-}
-
-/* Logo */
-
-.logo{
+    left:0;
+    width:100%;
+    height:90px;
+ 
     display:flex;
     align-items:center;
-    gap:10px;
-
+    justify-content:space-between;
+ 
+    padding:0 8%;
+ 
+    background:black;
+ 
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+ 
+    z-index:1000;
+ 
 }
-
+ 
+/* ==========================
+        LOGO
+========================== */
+ 
 .logo img{
-    width:80px;
-    height: 80px;
+display: block;
+    width:170px;
+    height:auto;
+   
 }
-
-.logo h2{
-    font-size:30px;
-}
-
-.logo span{
-    color:#0d6efd;
-}
-
-/* Navigation */
-
-nav ul{
+ 
+/* ==========================
+      NAVIGATION
+========================== */
+ 
+.nav-links{
+    list-style:none;
     display:flex;
+    align-items:center;
+    gap:30px;
+}
+ 
+.nav-links li{
+    position:relative;
+}
+ 
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    padding:10px 0;
+    font-weight:500;
+}
+.dropdown-menu{
+    position:absolute;
+    top:30px;
+    left:0;
+    width:180px;
+    background:white;
+    color: black;
+    border:2px solid orange;
+    border-radius:12px;
+    display:none;
+    overflow:hidden;
     list-style:none;
 }
-
-nav ul li{
-    margin:0 18px;
+ 
+.dropdown:hover .dropdown-menu{
+    display:block;
 }
-
-nav ul li a{
-    text-decoration:none;
-    color:inherit;
-    font-size:18px;
-    font-weight:600;
-    transition:.3s;
+ 
+.dropdown-menu li a{
+    display:block;
+    padding:12px 18px;
 }
-
-nav ul li a:hover{
-    color:#0d6efd;
+ 
+.dropdown-menu li:first-child a{
+    color:black;
+    border-bottom:1px solid black;
 }
-
-/* Right Side */
-
-.right-menu{
+ 
+.dropdown-menu li a:hover{
+    background:white;
+}
+ 
+ 
+/* ==========================
+      RIGHT BUTTONS
+========================== */
+ 
+.header-right{
+ 
     display:flex;
     align-items:center;
     gap:15px;
+ 
 }
-
-button{
-    cursor:pointer;
-}
-
-/* Toggle Buttons */
-
-.icon-btn{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:white;
-    font-size:18px;
-}
-
-body.dark .icon-btn{
-    background:black;
-    color:white;
-}
-
-/* Book Button */
-
+ 
+/* Common Button */
+ 
+.header-right button,
+.login-btn,
 .book-btn{
-    padding:12px 24px;
+ 
+    height:46px;
+ 
+    padding:0 22px;
+ 
     border:none;
-    border-radius:30px;
-    background:#0d6efd;
-    color:white;
-    font-size:16px;
-    font-weight:bold;
+ 
+    border-radius:10px;
+ 
+    cursor:pointer;
+ 
+    text-decoration:none;
+ 
+    display:flex;
+ 
+    align-items:center;
+ 
+    justify-content:center;
+ 
+    gap:8px;
+ 
+    font-size:15px;
+ 
+    font-weight:600;
+ 
     transition:.3s;
+ 
+}
+ 
+/* RTL Button */
+ 
+#rtlBtn{
+ 
+    background:#fff;
+ 
+    color:#0d6efd;
+ 
+}
+ 
+#rtlBtn:hover{
+ 
+    background:#ff9800;
+ 
+    color:#fff;
+ 
+}
+ 
+/* Theme Button */
+ 
+#themeBtn{
+ 
+    width:46px;
+ 
+    background:#fff;
+ 
+    color:#0d6efd;
+ 
+}
+ 
+#themeBtn:hover{
+ 
+    background:#ff9800;
+ 
+    color:#fff;
+ 
+}
+ 
+/* Login */
+ 
+.login-btn{
+ 
+    background:#fff;
+ 
+    color:#0d6efd;
+ 
+}
+ 
+.login-btn:hover{
+ 
+    background:#e9ecef;
+ 
+}
+ 
+/* Book */
+ 
+.book-btn{
+ 
+    background:#ff9800;
+ 
+    color:#fff;
+ 
+}
+ 
+.book-btn:hover{
+ 
+    background:#ffb347;
+ 
+    color:#000;
+ 
+}
+ 
+/* ==========================
+       DARK MODE
+========================== */
+ 
+/* ==========================
+        DARK MODE
+========================== */
+
+body.dark{
+    background:black;
+    color:#fff;
 }
 
-.book-btn:hover{
-    background:orange;
+body.dark .header{
+    background:#fff;
+}
+
+body.dark .nav-links a{
+    color:#000;
+}
+
+body.dark .nav-links a:hover{
+    color:#ff9800;
+}
+
+body.dark .login-btn{
+    background:#ffffff;
+    color:#081f5c;
+}
+
+body.dark #rtlBtn,
+body.dark #themeBtn{
+    background:black;
+    color:#fff;
+}
+ 
+/* ==========================
+        RTL SUPPORT
+========================== */
+ 
+html[dir="rtl"] .header{
+ 
+    flex-direction:row-reverse;
+ 
+}
+ 
+html[dir="rtl"] .navbar{
+ 
+    flex-direction:row-reverse;
+ 
+}
+ 
+html[dir="rtl"] .header-right{
+ 
+    flex-direction:row-reverse;
+ 
+}
+ 
+/* ==========================
+      RESPONSIVE
+========================== */
+ 
+@media(max-width:992px){
+ 
+.header{
+ 
+    padding:0 5%;
+ 
+}
+ 
+.navbar{
+ 
+    gap:20px;
+ 
+}
+ 
+.logo img{
+ 
+    width:150px;
+ 
+}
+ 
+}
+ 
+@media(max-width:768px){
+ 
+.header{
+ 
+    flex-wrap:wrap;
+ 
+    height:auto;
+ 
+    padding:15px 5%;
+ 
+}
+ 
+.navbar{
+ 
+    width:100%;
+    justify-content:center;
+    margin:15px 0;
+ 
+    flex-wrap:wrap;
+ 
+}
+ 
+.header-right{
+ 
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+ 
+}
+ 
 }
 .section-title{
     text-align:center;
@@ -469,6 +715,7 @@ body.dark .icon-btn{
     object-fit:cover;
     border:5px solid orange;
     margin-bottom:20px;
+    align-items: center;
 }
 
 .testimonial-card h3{
@@ -491,71 +738,206 @@ body.dark .icon-btn{
     color:black;
     line-height:1.8;
 }
-.footer-column{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding:50px.20px;
-    background-color: white;
-    color: black;    
-    margin-top: 400px;
+.footer{
+    background:#000;
+    color:#fff;
+    padding-top:70px;
 }
 
-.footer-container li{
-    list-style: none;
-}
-.footer-container a{
-    text-decoration: none;
-    color: black;
+.footer-container{
+    padding:0 7% 50px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    gap:50px;
 }
 
-    
-.footer-container h2{
-    border-bottom: 1px solid black;
-    margin-bottom: 15px;
-    color: blue;
+.footer-logo{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
-.footer-container img{
-    display: flex;
-    width:100px;
-    height: 70px;
+
+.footer-logo i{
+    color:#ff9800;
 }
-.footer-bottom{
+
+.footer-logo span{
+    color:#ff9800;
+}
+.footer img{
+    width:170px;
+    height:auto;
+}
+.footer-box > p{
+    line-height:1.7;
+}
+
+.footer-box h3{
+    margin-bottom:20px;
+    color:#ff9800;
+}
+
+.footer-box > a{
+    display:block;
+    color:#fff;
+    margin-bottom:13px;
+}
+
+.footer-box > a:hover{
+    color:#ff9800;
+}
+
+.footer-box > a i{
+    color:#ff9800;
+    margin-right:8px;
+}
+
+.footer-box > p{
+    margin-bottom:15px;
+}
+
+.footer-box > p i{
+    color:#ff9800;
+    width:25px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.social-icons a{
+    width:42px;
+    height:42px;
+    background:#fff;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#ff9800;
+    color:#fff;
+}
+
+.copyright{
+    border-top:1px solid #fff;
     text-align:center;
-    color:black;
-    font-size:15px;
-    background-color: white;
-    padding: 0px opx 20px 0px;
+    padding:20px;
 }
+
+
+/* =========================
+   HERO BANNER
+========================= */
+
 .hero-banner{
-    text-align: center;
-    width: 100%;
-    gap: 20px;
-    padding: 30px;
-    background-image: url("image/home\ page.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 0;
-    color: white;
+    width:100%;
+    min-height:600px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("image/home\ page.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:60px 20px;
 }
+
+/* Small Heading */
+
 .hero-banner h5{
-    font-size: 30px;
+    color:#ff9800;
+    font-size:22px;
+    margin-bottom:15px;
+    font-weight:600;
 }
+
+/* Main Heading */
+
 .hero-banner h1{
-    font-size: 50px;
+    color:#fff;
+    font-size:52px;
+    max-width:900px;
+    line-height:1.2;
+    margin-bottom:30px;
+    font-weight:700;
 }
+
+/* Book Now Button */
+
 .hero-banner button{
-    padding: 10px;
-    border-radius: 10px;
-    background-color: blue;
-    color: white;
+    background:#ff9800;
+    color:#fff;
+
+    border:none;
+    padding:15px 35px;
+
+    font-size:17px;
+    font-weight:600;
+
+    border-radius:8px;
+    cursor:pointer;
+
+    transition:0.3s ease;
 }
+
 .hero-banner button:hover{
-    background-color: orange;
-    color: black;
+    background:#0d6efd;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .hero-banner{
+        min-height:500px;
+        padding:40px 20px;
+    }
+
+    .hero-banner h5{
+        font-size:18px;
+    }
+
+    .hero-banner h1{
+        font-size:36px;
+    }
+
+    .hero-banner button{
+        padding:13px 28px;
+        font-size:16px;
+    }
+}
+
+
+@media(max-width:480px){
+
+    .hero-banner{
+        min-height:450px;
+    }
+
+    .hero-banner h1{
+        font-size:28px;
+    }
+
+    .hero-banner h5{
+        font-size:16px;
+    }
 }

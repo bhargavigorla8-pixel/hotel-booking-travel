@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
+ 
+ 
+ 
+<header class="header">
+ 
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+        <img src="image/logo image.png" alt="StayEase Logo">
+       
+    </a>
+ 
+    <!-- Navigation -->
+    <ul class="nav-links">
+ 
+            <li class="dropdown">
+                <a href="#">
+                    Home 
+                </a>
+ 
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                </ul>
+            </li>
+ 
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+ 
+        </ul>
+ 
+    <!-- Right Side Buttons -->
+ 
+    <div class="header-right">
+ 
+        <!-- RTL / LTR -->
+ 
+        <button id="rtlBtn" title="Change Direction">
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        </button>
+ 
+        <!-- Dark Mode -->
+ 
+        <button id="themeBtn" title="Dark Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+ 
+        <!-- Login -->
+ 
+       
+ 
+        <!-- Book Now -->
+ 
+        <a href="login.html" class="book-btn">
+            Book Now
+        </a>
+ 
+    </div>
+    </header>
+   
+<script>
+const themeBtn = document.getElementById("themeBtn");
+const rtlBtn = document.getElementById("rtlBtn");
+ 
+// ===============================
+// Restore Saved Theme
+// ===============================
+ 
+const savedTheme = localStorage.getItem("theme");
+ 
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+} else {
+    document.body.classList.remove("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+}
+ 
+// ===============================
+// Restore Saved Direction
+// ===============================
+ 
+const savedDirection = localStorage.getItem("direction");
+ 
+if (savedDirection === "rtl") {
+ 
+    document.documentElement.setAttribute("dir", "rtl");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>LTR</span>
+    `;
+ 
+} else {
+ 
+    document.documentElement.setAttribute("dir", "ltr");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>RTL</span>
+    `;
+}
+ 
+// ===============================
+// Dark / Light Mode
+// ===============================
+ 
+themeBtn.addEventListener("click", () => {
+ 
+    document.body.classList.toggle("dark");
+ 
+    if (document.body.classList.contains("dark")) {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+ 
+        localStorage.setItem("theme", "dark");
+ 
+    } else {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+ 
+        localStorage.setItem("theme", "light");
+    }
+ 
+});
+ 
+// ===============================
+// RTL / LTR
+// ===============================
+ 
+rtlBtn.addEventListener("click", () => {
+ 
+    if (document.documentElement.getAttribute("dir") === "ltr") {
+ 
+        document.documentElement.setAttribute("dir", "rtl");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>LTR</span>
+        `;
+ 
+        localStorage.setItem("direction", "rtl");
+ 
+    } else {
+ 
+        document.documentElement.setAttribute("dir", "ltr");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        `;
+ 
+        localStorage.setItem("direction", "ltr");
+    }
+ 
+});
+ 
+ 
+</script>
+
+<section class="service-hero">
+
+    <div class="service-content">
+        <h1>Our Services</h1>
+
+        <h3>Experience Comfort Like Never Before</h3>
+
+        <p>
+            We offer premium hospitality services designed to make your stay
+            relaxing, comfortable, and unforgettable. From luxury accommodations
+            to personalized guest assistance, we ensure every moment of your
+            journey is truly special.
+        </p>
+
+        <a href="#" class="service-btn">Explore Services</a>
+    </div>
+
+</section>
+<section class="hotel-services">
+
+    <div class="section-title">
+        <h2>Our Premium Services</h2>
+        <p>Enjoy exceptional hospitality with our wide range of premium hotel services.</p>
+    </div>
+
+    <div class="service-container">
+
+        <div class="service-card">
+            <i class="fa-solid fa-bell-concierge"></i>
+            <h3>24/7 Room Service</h3>
+            <p>Delicious meals and assistance delivered to your room anytime.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-plane-arrival"></i>
+            <h3>Airport Transfer</h3>
+            <p>Convenient airport pickup and drop-off for a hassle-free journey.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-utensils"></i>
+            <h3>Restaurant & Dining</h3>
+            <p>Enjoy delicious local and international cuisine prepared by expert chefs.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-spa"></i>
+            <h3>Spa & Wellness</h3>
+            <p>Relax your body and mind with luxurious spa treatments.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-shirt"></i>
+            <h3>Laundry Service</h3>
+            <p>Professional laundry and dry-cleaning services for your convenience.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-car"></i>
+            <h3>Car Rental</h3>
+            <p>Explore the city with our reliable and comfortable rental vehicles.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-broom"></i>
+            <h3>Housekeeping</h3>
+            <p>Daily housekeeping to keep your room clean, fresh, and comfortable.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Our friendly support team is always ready to assist you.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- Destination Section -->
+
+<section class="destination">
+    <div class="destination-title">
+        <h2>Explore <span>Popular Destinations</span></h2>
+        <p>
+            Discover beautiful places and find the perfect stay for your next journey.
+        </p>
+    </div>
+
+
+    <div class="destination-container">
+
+        <div class="destination-card">
+            <img src="image/hotel-2.jpeg" alt="">
+            <div class="destination-content">
+                <h3>Munnar</h3>
+                <p>Enjoy nature, mountains and peaceful resorts.</p>
+                <button>View Hotels</button>
+            </div>
+        </div>
+
+
+        <div class="destination-card">
+            <img src="image/hotel-10.jpeg" alt="">
+            <div class="destination-content">
+                <h3>Goa</h3>
+                <p>Relax on beaches with luxury hotels.</p>
+                <button>View Hotels</button>
+            </div>
+        </div>
+
+
+        <div class="destination-card">
+            <img src="image/hotel-12.jpeg" alt="">
+            <div class="destination-content">
+                <h3>Dubai</h3>
+                <p>Experience luxury stays and amazing views.</p>
+                <button>View Hotels</button>
+            </div>
+        </div>
+
+
+        <div class="destination-card">
+            <img src="image/hotel-2.jpeg" alt="">
+            <div class="destination-content">
+                <h3>Bali</h3>
+                <p>Beautiful resorts for memorable vacations.</p>
+                <button>View Hotels</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- Hotel Rooms Section -->
+
+<section class="rooms">
+
+    <div class="rooms-title">
+        <h2>Our <span>Hotel Rooms</span></h2>
+        <p>
+            Choose comfortable rooms designed for every type of traveller.
+        </p>
+    </div>
+
+
+    <div class="rooms-container">
+
+
+        <div class="room-card">
+
+            <img src="image/gallery_6.jpg" alt="">
+
+            <div class="room-content">
+
+                <h3>Family Room</h3>
+
+                <p>
+                    Spacious rooms with modern facilities perfect for families.
+                </p>
+
+                <div class="room-price">
+                    ₹2500 / Night
+                </div>
+
+                <button>Book Now</button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="room-card">
+
+            <img src="image/gallery_2.jpg" alt="">
+
+            <div class="room-content">
+
+                <h3>Deluxe Room</h3>
+
+                <p>
+                    Elegant rooms with beautiful interiors and premium comfort.
+                </p>
+
+                <div class="room-price">
+                    ₹3500 / Night
+                </div>
+
+                <button>Book Now</button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="room-card">
+
+            <img src="image/services-20.jpeg" alt="">
+
+            <div class="room-content">
+
+                <h3>Luxury Suite</h3>
+
+                <p>
+                    Enjoy luxury stays with extra space and exclusive services.
+                </p>
+
+                <div class="room-price">
+                    ₹5000 / Night
+                </div>
+
+                <button>Book Now</button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="room-card">
+
+            <img src="image/services-21.jpeg" alt="">
+
+            <div class="room-content">
+
+                <h3>Honeymoon Room</h3>
+
+                <p>
+                    Romantic rooms specially designed for couples.
+                </p>
+
+                <div class="room-price">
+                    ₹4500 / Night
+                </div>
+
+                <button>Book Now</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+               <img src="image/logo image.png" alt="">
+                Stay<span>Nest</span>
+            </div>
+
+            <p>
+                Discover comfortable hotels and unforgettable
+                stays at destinations around the world.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                About Us
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Destinations
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Rooms
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Our Services</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Hotel Booking
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Room Service
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Restaurant
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Travel Assistance
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Hyderabad, India
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@staynest.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 StayNest. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+```

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - StayEase</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- Left Side -->
+        <div class="login-image">
+            <div class="overlay">
+                <h1>Welcome to <span>StayEase</span></h1>
+                <p>
+                    Find your perfect stay and make every journey
+                    comfortable and memorable.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="login-box">
+
+            <div class="logo">
+                <i class="fa-solid fa-hotel"></i>
+                <span>Stay<span>Ease</span></span>
+            </div>
+
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Login to continue your booking</p>
+
+            <form id="loginForm">
+
+                <!-- Email -->
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required>
+
+                    <i class="fa-solid fa-eye password-eye"
+                       id="togglePassword"></i>
+                </div>
+
+                <!-- Remember / Forgot -->
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+            <!-- Signup -->
+            <div class="signup">
+                Don't have an account?
+                <a href="signup.html">Create Account</a>
+            </div>
+
+            <!-- Back Home -->
+            <a href="index.html" class="back-home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+    <script>
+// ================= PASSWORD SHOW / HIDE =================
+
+const togglePassword = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+togglePassword.addEventListener("click", function () {
+
+    if (password.type === "password") {
+
+        password.type = "text";
+
+        togglePassword.classList.remove("fa-eye");
+        togglePassword.classList.add("fa-eye-slash");
+
+    } else {
+
+        password.type = "password";
+
+        togglePassword.classList.remove("fa-eye-slash");
+        togglePassword.classList.add("fa-eye");
+    }
+});
+
+
+// ================= LOGIN FORM =================
+
+const loginForm = document.getElementById("loginForm");
+const message = document.getElementById("message");
+
+loginForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const passwordValue = document.getElementById("password").value;
+
+    if (email === "" || passwordValue === "") {
+
+        message.textContent = "Please fill in all fields.";
+        message.style.color = "#ff9800";
+
+        return;
+    }
+
+    // Demo login
+    if (email === "user@gmail.com" && passwordValue === "123456") {
+
+        message.textContent = "Login successful!";
+        message.style.color = "#0d6efd";
+
+        setTimeout(function () {
+            window.location.href = "index.html";
+        }, 1000);
+
+    } else {
+
+        message.textContent = "Invalid email or password.";
+        message.style.color = "#ff9800";
+    }
+
+});
+
+    </script>
+
+</body>
+</html>

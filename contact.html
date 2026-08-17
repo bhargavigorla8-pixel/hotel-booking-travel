@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
+ 
+ 
+ 
+<header class="header">
+ 
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+        <img src="image/logo image.png" alt="StayEase Logo">
+       
+    </a>
+ 
+    <!-- Navigation -->
+    <ul class="nav-links">
+ 
+            <li class="dropdown">
+                <a href="#">
+                    Home 
+                </a>
+ 
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                </ul>
+            </li>
+ 
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+ 
+        </ul>
+ 
+    <!-- Right Side Buttons -->
+ 
+    <div class="header-right">
+ 
+        <!-- RTL / LTR -->
+ 
+        <button id="rtlBtn" title="Change Direction">
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        </button>
+ 
+        <!-- Dark Mode -->
+ 
+        <button id="themeBtn" title="Dark Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+ 
+        <!-- Login -->
+ 
+       
+ 
+        <!-- Book Now -->
+ 
+        <a href="login.html" class="book-btn">
+            Book Now
+        </a>
+ 
+    </div>
+    </header>
+   
+<script>
+const themeBtn = document.getElementById("themeBtn");
+const rtlBtn = document.getElementById("rtlBtn");
+ 
+// ===============================
+// Restore Saved Theme
+// ===============================
+ 
+const savedTheme = localStorage.getItem("theme");
+ 
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+} else {
+    document.body.classList.remove("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+}
+ 
+// ===============================
+// Restore Saved Direction
+// ===============================
+ 
+const savedDirection = localStorage.getItem("direction");
+ 
+if (savedDirection === "rtl") {
+ 
+    document.documentElement.setAttribute("dir", "rtl");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>LTR</span>
+    `;
+ 
+} else {
+ 
+    document.documentElement.setAttribute("dir", "ltr");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>RTL</span>
+    `;
+}
+ 
+// ===============================
+// Dark / Light Mode
+// ===============================
+ 
+themeBtn.addEventListener("click", () => {
+ 
+    document.body.classList.toggle("dark");
+ 
+    if (document.body.classList.contains("dark")) {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+ 
+        localStorage.setItem("theme", "dark");
+ 
+    } else {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+ 
+        localStorage.setItem("theme", "light");
+    }
+ 
+});
+ 
+// ===============================
+// RTL / LTR
+// ===============================
+ 
+rtlBtn.addEventListener("click", () => {
+ 
+    if (document.documentElement.getAttribute("dir") === "ltr") {
+ 
+        document.documentElement.setAttribute("dir", "rtl");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>LTR</span>
+        `;
+ 
+        localStorage.setItem("direction", "rtl");
+ 
+    } else {
+ 
+        document.documentElement.setAttribute("dir", "ltr");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        `;
+ 
+        localStorage.setItem("direction", "ltr");
+    }
+ 
+});
+ 
+ 
+</script>
+
+
+    <!-- =========================
+         CONTACT HERO
+    ========================== -->
+
+    <section class="contact-hero">
+
+        <div class="contact-hero-content">
+            
+            <h1>Contact <span>Us</span></h1>
+
+            <p>
+                We are here to help you find the perfect stay.
+                Get in touch with our team today.
+            </p>
+
+            <a href="index.html" class="home-btn">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- Left Side -->
+
+            <div class="contact-info">
+
+                <h2>Get In <span>Touch</span></h2>
+
+                <p class="contact-description">
+                    Have questions about your booking or need help
+                    choosing a hotel? Our team is always ready to assist you.
+                </p>
+
+
+                <!-- Address -->
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>123 Travel Street, Bangalore, India</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <h3>Phone Number</h3>
+                        <p>+91 98765 43210</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <h3>Email Address</h3>
+                        <p>support@stayease.com</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Working Hours -->
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Sunday: 9:00 AM - 8:00 PM</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Social Media -->
+
+                <div class="contact-social">
+
+                    <h3>Follow Us</h3>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side - Contact Form -->
+
+            <div class="contact-form">
+
+                <h2>Send Us A <span>Message</span></h2>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <div class="input-box">
+
+                            <label for="name">Full Name</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="email">Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <div class="input-box">
+
+                            <label for="phone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="subject">Subject</label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                placeholder="Enter subject"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label for="message">Your Message</label>
+
+                        <textarea
+                            id="message"
+                            rows="7"
+                            placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="send-btn">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAP SECTION
+    ========================== -->
+
+    <section class="map-section">
+
+        <div class="map-heading">
+
+            <h2>Find <span>Us</span></h2>
+
+            <p>
+                Visit us or get in touch with our support team.
+            </p>
+
+        </div>
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=Bangalore,India&output=embed"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    
+
+
+
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+               <img src="image/logo image.png" alt="">
+                Stay<span>Nest</span>
+            </div>
+
+            <p>
+                Discover comfortable hotels and unforgettable
+                stays at destinations around the world.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                About Us
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Destinations
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Rooms
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Our Services</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Hotel Booking
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Room Service
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Restaurant
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Travel Assistance
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Hyderabad, India
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@staynest.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 StayNest. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>

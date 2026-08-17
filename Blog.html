@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
+ 
+ 
+ 
+<header class="header">
+ 
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+        <img src="image/logo image.png" alt="StayEase Logo">
+       
+    </a>
+ 
+    <!-- Navigation -->
+    <ul class="nav-links">
+ 
+            <li class="dropdown">
+                <a href="#">
+                    Home 
+                </a>
+ 
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                </ul>
+            </li>
+ 
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+ 
+        </ul>
+ 
+    <!-- Right Side Buttons -->
+ 
+    <div class="header-right">
+ 
+        <!-- RTL / LTR -->
+ 
+        <button id="rtlBtn" title="Change Direction">
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        </button>
+ 
+        <!-- Dark Mode -->
+ 
+        <button id="themeBtn" title="Dark Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+ 
+        <!-- Login -->
+ 
+       
+ 
+        <!-- Book Now -->
+ 
+        <a href="login.html" class="book-btn">
+            Book Now
+        </a>
+ 
+    </div>
+    </header>
+   
+<script>
+const themeBtn = document.getElementById("themeBtn");
+const rtlBtn = document.getElementById("rtlBtn");
+ 
+// ===============================
+// Restore Saved Theme
+// ===============================
+ 
+const savedTheme = localStorage.getItem("theme");
+ 
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+} else {
+    document.body.classList.remove("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+}
+ 
+// ===============================
+// Restore Saved Direction
+// ===============================
+ 
+const savedDirection = localStorage.getItem("direction");
+ 
+if (savedDirection === "rtl") {
+ 
+    document.documentElement.setAttribute("dir", "rtl");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>LTR</span>
+    `;
+ 
+} else {
+ 
+    document.documentElement.setAttribute("dir", "ltr");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>RTL</span>
+    `;
+}
+ 
+// ===============================
+// Dark / Light Mode
+// ===============================
+ 
+themeBtn.addEventListener("click", () => {
+ 
+    document.body.classList.toggle("dark");
+ 
+    if (document.body.classList.contains("dark")) {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+ 
+        localStorage.setItem("theme", "dark");
+ 
+    } else {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+ 
+        localStorage.setItem("theme", "light");
+    }
+ 
+});
+ 
+// ===============================
+// RTL / LTR
+// ===============================
+ 
+rtlBtn.addEventListener("click", () => {
+ 
+    if (document.documentElement.getAttribute("dir") === "ltr") {
+ 
+        document.documentElement.setAttribute("dir", "rtl");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>LTR</span>
+        `;
+ 
+        localStorage.setItem("direction", "rtl");
+ 
+    } else {
+ 
+        document.documentElement.setAttribute("dir", "ltr");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        `;
+ 
+        localStorage.setItem("direction", "ltr");
+    }
+ 
+});
+ 
+ 
+</script>
+<section class="blog-hero">
+    <div class="blog-hero-content">
+        <h5>Explore & Discover</h5>
+        <h1>Our Blog</h1>
+        <p>Travel tips, hotel guides, destinations and inspiring journeys.</p>
+    </div>
+</section>
+<section class="blog-section">
+
+    <div class="blog-heading">
+        <h2>Our <span>Blog</span></h2>
+        <p>Discover travel tips, destinations, and hotel experiences</p>
+    </div>
+
+    <div class="blog-container">
+
+        <!-- Blog 1 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="image/hotel-3.jpeg" alt="Luxury Hotel">
+            </div>
+
+            <div class="blog-content">
+                <span class="blog-date">August 10, 2026</span>
+                <h3>Top Luxury Hotels for Your Next Vacation</h3>
+                <p>
+                    Discover some of the best luxury hotels where comfort,
+                    relaxation, and unforgettable experiences come together.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="image/hotel-4.jpeg" alt="Travel Destination">
+            </div>
+
+            <div class="blog-content">
+                <span class="blog-date">August 8, 2026</span>
+                <h3>Best Destinations for a Perfect Getaway</h3>
+                <p>
+                    Explore beautiful destinations and find the perfect
+                    places to relax, explore, and create wonderful memories.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="image/hotel-5.jpeg" alt="Hotel Room">
+            </div>
+
+            <div class="blog-content">
+                <span class="blog-date">August 5, 2026</span>
+                <h3>How to Choose the Perfect Hotel</h3>
+                <p>
+                    Learn simple tips to choose the right hotel based on
+                    location, facilities, comfort, and your travel budget.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- FAQ Section -->
+<section class="faq-section">
+
+    <div class="faq-heading">
+        <h2>Frequently Asked <span>Questions</span></h2>
+        <p>Find answers to the most common questions about hotel bookings.</p>
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I book a hotel?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    You can search for your preferred destination, select your
+                    travel dates, choose a hotel and room, and complete your booking.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I cancel my hotel booking?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes. Cancellation depends on the hotel's cancellation policy
+                    and the type of room you have booked.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I modify my booking?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, you can request changes to your booking, such as travel
+                    dates or room type, subject to availability.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What payment methods do you accept?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    We accept credit cards, debit cards, UPI, and online banking
+                    for secure and convenient payments.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How do I know if my booking is confirmed?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    After successfully completing your booking, you will receive
+                    a confirmation with your reservation details.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are the check-in and check-out times?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Check-in and check-out times vary by hotel. You can find the
+                    exact timings on the hotel's booking details page.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I choose a specific room?
+                <span>+</span>
+            </button>
+            
+
+    </div>
+
+</section>
+
+
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+               <img src="image/logo image.png" alt="">
+                Stay<span>Nest</span>
+            </div>
+
+            <p>
+                Discover comfortable hotels and unforgettable
+                stays at destinations around the world.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                About Us
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Destinations
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Rooms
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Our Services</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Hotel Booking
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Room Service
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Restaurant
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Travel Assistance
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Hyderabad, India
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@staynest.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 StayNest. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+```

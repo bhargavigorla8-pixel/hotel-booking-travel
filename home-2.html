@@ -7,63 +7,173 @@
     <link rel="stylesheet" href="home-2.css">
     <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-</head>
-<body>
-    
-    
-
-    </header>
-    <header>
-
-<div class="logo">
-<img src="image/logo image.jpeg" alt="">
-
-</div>
-
-<nav>
-    
-<ul class="dropdown-menu">
-                    <li><a href="home.html">Home 1</a></li>
+   
+ 
+ 
+ 
+<header class="header">
+ 
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+        <img src="image/logo image.png" alt="StayEase Logo">
+       
+    </a>
+ 
+    <!-- Navigation -->
+    <ul class="nav-links">
+ 
+            <li class="dropdown">
+                <a href="#">
+                    Home 
+                </a>
+ 
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home 1</a></li>
                     <li><a href="home-2.html">Home 2</a></li>
-
-<li><a href="#">Rooms</a></li>
-<li><a href="#">Gallery</a></li>
-<li><a href="#">Facilities</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
-
-<div class="right-menu">
-
-
-<button class="icon-btn" onclick="toggleTheme()">
-<i class="fa-solid fa-moon"></i>
-</button>
-
-<button class="book-btn">
-Explore More
-</button>
-
-</div>
-
-</header>
-
-
-
+                </ul>
+            </li>
+ 
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+ 
+        </ul>
+ 
+    <!-- Right Side Buttons -->
+ 
+    <div class="header-right">
+ 
+        <!-- RTL / LTR -->
+ 
+        <button id="rtlBtn" title="Change Direction">
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        </button>
+ 
+        <!-- Dark Mode -->
+ 
+        <button id="themeBtn" title="Dark Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+ 
+        <!-- Login -->
+ 
+       
+ 
+        <!-- Book Now -->
+ 
+        <a href="login.html" class="book-btn">
+            Book Now
+        </a>
+ 
+    </div>
+    </header>
+   
 <script>
-
-/* Light & Dark Mode */
-
-function toggleTheme(){
-
-document.body.classList.toggle("dark");
-
+const themeBtn = document.getElementById("themeBtn");
+const rtlBtn = document.getElementById("rtlBtn");
+ 
+// ===============================
+// Restore Saved Theme
+// ===============================
+ 
+const savedTheme = localStorage.getItem("theme");
+ 
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+} else {
+    document.body.classList.remove("dark");
+    themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
 }
-
-
+ 
+// ===============================
+// Restore Saved Direction
+// ===============================
+ 
+const savedDirection = localStorage.getItem("direction");
+ 
+if (savedDirection === "rtl") {
+ 
+    document.documentElement.setAttribute("dir", "rtl");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>LTR</span>
+    `;
+ 
+} else {
+ 
+    document.documentElement.setAttribute("dir", "ltr");
+ 
+    rtlBtn.innerHTML = `
+        <i class="fa-solid fa-language"></i>
+        <span>RTL</span>
+    `;
+}
+ 
+// ===============================
+// Dark / Light Mode
+// ===============================
+ 
+themeBtn.addEventListener("click", () => {
+ 
+    document.body.classList.toggle("dark");
+ 
+    if (document.body.classList.contains("dark")) {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+ 
+        localStorage.setItem("theme", "dark");
+ 
+    } else {
+ 
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+ 
+        localStorage.setItem("theme", "light");
+    }
+ 
+});
+ 
+// ===============================
+// RTL / LTR
+// ===============================
+ 
+rtlBtn.addEventListener("click", () => {
+ 
+    if (document.documentElement.getAttribute("dir") === "ltr") {
+ 
+        document.documentElement.setAttribute("dir", "rtl");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>LTR</span>
+        `;
+ 
+        localStorage.setItem("direction", "rtl");
+ 
+    } else {
+ 
+        document.documentElement.setAttribute("dir", "ltr");
+ 
+        rtlBtn.innerHTML = `
+            <i class="fa-solid fa-language"></i>
+            <span>RTL</span>
+        `;
+ 
+        localStorage.setItem("direction", "ltr");
+    }
+ 
+});
+ 
+ 
 </script>
-</html>
+ 
+ 
+
+<body>
+
 
     <section class="hero-banner">
       <h5>Welcome to Hotel</h5>
@@ -486,72 +596,136 @@ document.body.classList.toggle("dark");
 
 </section>
 
-<section class="footer-column">
- 
-       <div class="footer-container">
-          <img src="image/logo image.jpeg" alt=""><br>
-          <p>Your trusted destination for comfortable stays, <br>luxury rooms, and unforgettable travel experiences.</p><br>
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-       </div>
-       <div class="footer-container">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Rooms</a></li>
-                <li><a href="">Facilities</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-       </div>
-       <div class="footer-container">
-        <h2>Our Services</h2>
-            <ul>
-                <li><a href="">Room Booking</a></li>
-                <li><a href="">Airport Picking</a></li>
-                <li><a href="">Restaurent</a></li>
-                <li><a href="">Checkin/checkout</a></li>
-                <li><a href="">Laundary Services</a></li>
-            </ul>
-       </div>
-       <div class="footer-container">
-           <h2>Support</h2>
-           <ul>
-                <li><a href="">FAQs</a></li>
-                <li><a href="">Terms&Conditions</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Cancelation Policy</a></li>
-                <li><a href="">Contact Support</a></li>
-            </ul>
- 
-           
-       </div>
-       <div class="footer-container">
-           <h2>Follow Us</h2>
-           <ul>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">Linkdin</a></li>
-                <li><a href="">Google</a></li>
-            </ul>
- 
-           
-       </div>
-       
-       
-       </section>
-       <section class="footer-bottom">
-       <div class="footer-bottom">
-        <p>&copy; 2026 Foodie's. All Rights Reserved.</p>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+               <img src="image/logo image.png" alt="">
+                Stay<span>Nest</span>
+            </div>
+
+            <p>
+                Discover comfortable hotels and unforgettable
+                stays at destinations around the world.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                About Us
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Destinations
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Rooms
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Our Services</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Hotel Booking
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Room Service
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Restaurant
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                Travel Assistance
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Hyderabad, India
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@staynest.com
+            </p>
+
+        </div>
+
     </div>
-      </section>
 
 
-      </head>
-<body>
+    <div class="copyright">
+
+        <p>
+            © 2026 StayNest. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
 
 
 </body>
