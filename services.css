@@ -1,373 +1,320 @@
-
-/* ================= GENERAL ================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#000;
-    background:#fff;
+body {
+    background: #ffffff;
+    color: #222222;
+    padding-top: 90px;
+    transition: 0.4s ease;
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 }
 
-img{
-    width:100%;
-    display:block;
+img {
+    width: 100%;
+    display: block;
 }
-
-
 /* ================= HEADER ================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    /* LIGHT MODE */
+    background: #ffffff;
+    color: #222222;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+
+    transition: background 0.4s ease, color 0.4s ease;
+}
 
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+/* ================= LOGO ================= */
+
+.logo img {
+    display: block;
+    width: 170px;
+    height: auto;
 }
- 
-html{
-    scroll-behavior:smooth;
+
+
+/* ================= NAVIGATION ================= */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
 }
- 
-body{
-    background:#ffffff;
-    color:#222;
-    padding-top:90px;
-    transition:.4s ease;
+
+.nav-links li {
+    position: relative;
 }
- 
-/* ==========================
-      STICKY HEADER
-========================== */
- 
-.header{
- 
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:90px;
- 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
- 
-    padding:0 8%;
- 
-    background:black;
- 
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
- 
-    z-index:1000;
- 
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #222222;
+
+    padding: 10px 0;
+
+    font-weight: 500;
+
+    transition: 0.3s;
 }
- 
-/* ==========================
-        LOGO
-========================== */
- 
-.logo img{
-display: block;
-    width:170px;
-    height:auto;
-   
+
+.nav-links a:hover {
+    color: #ff9800;
 }
- 
-/* ==========================
-      NAVIGATION
-========================== */
- 
-.nav-links{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:30px;
+
+
+/* ================= DROPDOWN ================= */
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    width: 180px;
+
+    background: #ffffff;
+
+    border: 2px solid #ff9800;
+    border-radius: 12px;
+
+    display: none;
+
+    overflow: hidden;
+
+    list-style: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
- 
-.nav-links li{
-    position:relative;
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
- 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    padding:10px 0;
-    font-weight:500;
+
+.dropdown-menu li a {
+    display: block;
+
+    padding: 12px 18px;
+
+    color: #000000;
 }
-.dropdown-menu{
-    position:absolute;
-    top:30px;
-    left:0;
-    width:180px;
-    background:white;
-    border:2px solid orange;
-    border-radius:12px;
-    display:none;
-    overflow:hidden;
-    list-style:none;
+
+.dropdown-menu li a:hover {
+    background: #ff9800;
+    color: #ffffff;
 }
- 
-.dropdown:hover .dropdown-menu{
-    display:block;
+
+
+/* ================= RIGHT BUTTONS ================= */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
- 
-.dropdown-menu li a{
-    display:block;
-    padding:12px 18px;
-}
- 
-.dropdown-menu li:first-child a{
-    color:white;
-    border-bottom:1px solid black;
-}
- 
-.dropdown-menu li a:hover{
-    background:white;
-}
- 
- 
-/* ==========================
-      RIGHT BUTTONS
-========================== */
- 
-.header-right{
- 
-    display:flex;
-    align-items:center;
-    gap:15px;
- 
-}
- 
-/* Common Button */
- 
+
 .header-right button,
-.login-btn,
-.book-btn{
- 
-    height:46px;
- 
-    padding:0 22px;
- 
-    border:none;
- 
-    border-radius:10px;
- 
-    cursor:pointer;
- 
-    text-decoration:none;
- 
-    display:flex;
- 
-    align-items:center;
- 
-    justify-content:center;
- 
-    gap:8px;
- 
-    font-size:15px;
- 
-    font-weight:600;
- 
-    transition:.3s;
- 
-}
- 
-/* RTL Button */
- 
-#rtlBtn{
- 
-    background:#fff;
- 
-    color:#0d6efd;
- 
-}
- 
-#rtlBtn:hover{
- 
-    background:#ff9800;
- 
-    color:#fff;
- 
-}
- 
-/* Theme Button */
- 
-#themeBtn{
- 
-    width:46px;
- 
-    background:#fff;
- 
-    color:#0d6efd;
- 
-}
- 
-#themeBtn:hover{
- 
-    background:#ff9800;
- 
-    color:#fff;
- 
-}
- 
-/* Login */
- 
-.login-btn{
- 
-    background:#fff;
- 
-    color:#0d6efd;
- 
-}
- 
-.login-btn:hover{
- 
-    background:#e9ecef;
- 
-}
- 
-/* Book */
- 
-.book-btn{
- 
-    background:#ff9800;
- 
-    color:#fff;
- 
-}
- 
-.book-btn:hover{
- 
-    background:#ffb347;
- 
-    color:#000;
- 
-}
- 
-/* ==========================
-        DARK MODE
-========================== */
+.book-btn {
 
-body.dark{
-    background:black;
-    color:#fff;
-}
+    height: 46px;
 
-body.dark .header{
-    background:#fff;
-}
+    padding: 0 22px;
 
-body.dark .nav-links a{
-    color:#000;
-}
+    border: none;
 
-body.dark .nav-links a:hover{
-    color:#ff9800;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
 
-body.dark .login-btn{
-    background:#ffffff;
-    color:#081f5c;
+/* RTL BUTTON */
+
+#rtlBtn {
+    background: #ffffff;
+    color: #0d6efd;
 }
+
+#rtlBtn:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* THEME BUTTON */
+
+#themeBtn {
+    width: 46px;
+
+    padding: 0;
+
+    background: #ffffff;
+    color: #0d6efd;
+}
+
+#themeBtn:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* BOOK BUTTON */
+
+.book-btn {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+.book-btn:hover {
+    background: #ffb347;
+    color: #000000;
+}
+
+
+/* =================================================
+                DARK MODE HEADER
+================================================= */
+
+body.dark .header {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark .nav-links a {
+    color: #ffffff;
+}
+
+body.dark .nav-links a:hover {
+    color: #ff9800;
+}
+
+
+/* DARK MODE DROPDOWN */
+
+body.dark .dropdown-menu {
+    background: #000000;
+    border-color: #ff9800;
+}
+
+body.dark .dropdown-menu li a {
+    color: #ffffff;
+}
+
+body.dark .dropdown-menu li a:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* DARK MODE BUTTONS */
 
 body.dark #rtlBtn,
-body.dark #themeBtn{
-    background:black;
-    color:#fff;
+body.dark #themeBtn {
+    background: #ffffff;
+    color: #0d6efd;
+}
+
+body.dark #rtlBtn:hover,
+body.dark #themeBtn:hover {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+
+/* =================================================
+                    RTL
+================================================= */
+
+html[dir="rtl"] .header {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .header-right {
+    flex-direction: row-reverse;
+}
+
+
+/* =================================================
+                  RESPONSIVE
+================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .header-right {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        width: 150px;
+    }
 }
  
-/* ==========================
-        RTL SUPPORT
-========================== */
  
-html[dir="rtl"] .header{
  
-    flex-direction:row-reverse;
- 
-}
- 
-html[dir="rtl"] .navbar{
- 
-    flex-direction:row-reverse;
- 
-}
- 
-html[dir="rtl"] .header-right{
- 
-    flex-direction:row-reverse;
- 
-}
- 
-/* ==========================
-      RESPONSIVE
-========================== */
- 
-@media(max-width:992px){
- 
-.header{
- 
-    padding:0 5%;
- 
-}
- 
-.navbar{
- 
-    gap:20px;
- 
-}
- 
-.logo img{
- 
-    width:150px;
- 
-}
- 
-}
- 
-@media(max-width:768px){
- 
-.header{
- 
-    flex-wrap:wrap;
- 
-    height:auto;
- 
-    padding:15px 5%;
- 
-}
- 
-.navbar{
- 
-    width:100%;
-    justify-content:center;
-    margin:15px 0;
- 
-    flex-wrap:wrap;
- 
-}
- 
-.header-right{
- 
-    width:100%;
-    justify-content:center;
-    flex-wrap:wrap;
- 
-}
- 
-}
 
 
 .service-hero{
